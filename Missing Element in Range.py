@@ -7,12 +7,11 @@ class Solution:
         #         ans.append(i)
         # return ans
         
-        freq = {}
-        for i in range(low, high+1):
-            freq[i] = 1
+        arr_set = set(arr)
         ans = []
-        for i, j in freq.items():
-            if i not in arr:
+        for i in range(low, high + 1):
+            if i not in arr_set:
                 ans.append(i)
         return ans
+
 obj = Solution()
